@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letsgetmony</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+
+        <h1 class="text-5xl text-center mt-8">Lets get some <span class="font-bold text-red-500">Money!!!</span></h1>
+
+    </header>
+    <main>
+        <section class="my-10">
+            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+                <div class="bg-green-500 p-8 rounded-xl">
+                    <h1 class="text-2xl">Deposite</h1>
+                    <h2 class="text-5xl">$00</h2>
+                </div>
+                <div class="bg-pink-500 p-8 rounded-xl">
+                    <h1 class="text-2xl">Withdraw</h1>
+                    <h2 class="text-5xl">$00</h2>
+                </div>
+                <div class="bg-red-500 p-8 rounded-xl">
+                    <h1 class="text-2xl">Balance</h1>
+                    <h2 class="text-5xl">$00</h2>
+                </div>
+            </div>
+        </section>
+        <!-- Deposite and Withdraw  -->
+        <section class="my-12">
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto ">
+                <div class="bg-indigo-400 p-12 rounded-xl">
+                    <h1 class="text-2xl my-2 text-white">Please Deposite</h1>
+                    <div class="rounded-xl">
+                        <input class="w-9/12 block mb-3 rounded-sm px-2" type="email" name="" id="deposite-field"
+                            placeholder="Amount you want Deposite">
+                        <button id="btn-deposite"
+                            class="bg-amber-500 px-4 py-1 text-white rounded-md hover:bg-sky-700 ">Deposite</button>
+                    </div>
+                </div>
+
+                <div class="bg-sky-400 p-12 rounded-xl">
+                    <h1 class="text-white text-2xl my-2">Please Withdraw</h1>
+                    <div class="rounded-xl text-white">
+                        <input class="w-9/12 block mb-3 rounded-sm px-2" type="email" name="" id="withdraw-field"
+                            placeholder="Amount you want Withdraw">
+                        <button id="btn-withdraw"
+                            class="bg-amber-500 px-4 py-1 rounded-md hover:bg-sky-700 ">Withdraw</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="js/depo.js">
+
+    </script>
+</body>
+
+</html>

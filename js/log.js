@@ -14,9 +14,11 @@ document.getElementById("btn-submit").addEventListener('click', function () {
 
     // step 4 condition 
     if (email === 'sontan@bap.com' && password === 'manus') {
-        console.log('valid user');
+        // console.log('valid user');
+        window.location.href = 'bank.html';
     }
     else {
-        console.log('not valid at this moment')
+        // console.log('not valid at this moment')
+        alert('you are not valid email for open this account');
     }
 })
