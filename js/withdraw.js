@@ -16,13 +16,17 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const previouswithdrawstring = withdrawelement.innerText;
     const previouswithdrawtotal = parseFloat(previouswithdrawstring);
 
+    if (isNaN(previouswithdrawtotal)) {
+        alert("please provide number");
+        return;
+    }
+
     // console.log(previouswithdrawtotal);
 
     // step 4 calculate total withdraw amount 
     // step 4.5 set amount 
 
-    const currentwithdrawamount = previouswithdrawtotal + newwithdrawfield;
-    withdrawelement.innerText = currentwithdrawamount;
+    
 
     // step 6 
     const getbalance = document.getElementById('balance-tolal');
@@ -30,6 +34,21 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const previousdepositebalance = parseFloat(previousdepositebalancestring);
 
 
+   // step 7 value submite than clear 
+    withdrawfield.value = '';
+
+
+//  step 8 overamount withdraw not fonud
+    
+    if (newwithdrawfield > previousdepositebalance) {
+        alert('you have not insufisent balance ');
+        return;
+    }
+    
+
+    const currentwithdrawamount = previouswithdrawtotal + newwithdrawfield;
+    withdrawelement.innerText = currentwithdrawamount;  
+    
     // console.log(previousdepositebalance);
 
     // step 6.5 set amount /
@@ -37,7 +56,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const newbalancetotal = previousdepositebalance - newwithdrawfield;
     getbalance.innerText = newbalancetotal;
 
-    // step 7 value submite than clear 
-    withdrawfield.value = '';
+ 
+    
 
 })
